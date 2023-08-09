@@ -1,0 +1,145 @@
+ServiceNow Platform
+Administrative Rights Access Policy
+
+Document Control Information
+Version: 1
+Revision: 1
+Issued: 08/09/2023
+Effective: 08/09/2023
+Document Owner: Patrick Quinn
+Document Approver:
+Document Classification: Confidential / Internal Use Only
+
+ 
+Table of Contents
+1	Purpose
+2	Scope
+3	Audience
+4	Definitions and Acronyms
+5	Appropriate Use of Administrator Access
+6	Inappropriate Use of Administrator Access
+7	Roles & Responsibilities
+8	Consequences of Violations
+9	Policy Review
+10	Policy Acceptance
+11	Revision History and Location
+
+1	Purpose 
+The purpose of this policy is to define the appropriate use of administrator access within the organization ServiceNow platform and to outline the actions that constitute inappropriate use of administrator access within the ServiceNow platform. This policy aims to ensure the security, integrity, and availability of systems, applications, and data by establishing guidelines for the responsible use of administrative privileges. Additionally, this policy defines key terms and roles and responsibilities associated with appropriate use of administrator access. 
+This document may also relate to other controls and authoritative sources, including NIST 800-53 and OWASP publications. Where there is overlap, the source document or control informs this document and should be considered authoritative.
+
+2	Scope
+This policy applies to all organization employees, contractors, and third-party vendors who have been granted administrative rights or privileged access to the ServiceNow platform, applications, and data contained within the ServiceNow platform.
+
+3	Audience
+This standard defines a set of minimum requirements for all organization employees and, unless otherwise noted, contractors, and vendors involved with development on the organization ServiceNow platform.  This includes, but is not limited to, application owners, application security leaders, software developers, business analysts, testers, application architects, and associated IT security and compliance roles.  
+
+4	Definitions and Acronyms
+The following list contains definitions and acronyms used within this standard.
+4.1	Administrative Access: Refers to elevated privileges granted to individuals that allow them to perform system configuration, maintenance, troubleshooting, and security-related activities on the ServiceNow platform.
+4.2	Application: A self-contained software module or package that provides specific functionality or services to users. It is designed to address a particular business need or process within an organization and is built on top of the ServiceNow platform's underlying infrastructure and capabilities.
+4.3	Application Owner: Technical owner of the application who maintains and supports the application to run effectively for business use.
+4.4	BPA: Business Process Automation
+4.5	Change Management: The process of controlling and managing changes to the ServiceNow platform, including configuration changes, application deployments, and system updates, to minimize disruptions and ensure proper documentation and approval.
+4.6	Contractor: A contractor is a person who is hired by organization to work for an agreed term. Contractors are typically hired as a leased worker, purchased service worker, or independent contractor.  Contractors will typically have a organization employee as a sponsor who he or she reports to and will be given an internal access to organization network.
+4.7	Credentials: Refers to the unique username and password or other authentication factors used to verify the identity of an individual accessing the ServiceNow platform.
+4.8	Development Environment: A dedicated workspace or instance where developers can create, modify, and test customizations, applications, and configurations before deploying them to a production environment. It provides a controlled and isolated environment for development activities, ensuring that changes and enhancements do not impact the stability or functionality of the live production environment.
+4.9	Independent Contractor: Independent contractors are self-employed individuals who provide specialized services or expertise to organization and other companies. They often engage in a consultant capacity due to special knowledge and should not be used where tasks can be handled by a leased worker. Independent contractors have a direct contract with organization for their services and are paid by the deliverables as opposed to by the hour.
+4.10	Information Security: The practice of protecting information and information systems from unauthorized access, use, disclosure, disruption, modification, or destruction to ensure confidentiality, integrity, and availability.
+4.11	Internet-Facing Application: Any organization application that is accessible on the internet, regardless of where the application is hosted.  For example, this would include applications hosted within organization, externally accessible applications in a cloud environment (regardless of the cloud provider), and mobile applications.
+4.12	ITOM: IT Operations Management
+4.13	ITSM: IT Service Management
+4.14	Leased workers: Contingent workers who are employed by a 3rd party that specialize in supplying temporary labor. The primary use of leased workers is either to complement or provide coverage for existing employees.  Typically, the leased workers are billed to the business by the hour.
+4.15	Least Privilege: The principle of granting users the minimum level of privileges necessary to perform their authorized tasks, reducing the risk of unauthorized access or accidental misuse.
+4.16	organization IT Infrastructure: All computing systems and associated networks that are managed for or by organization IT to support the storage, transmission and/or processing of organization data.
+4.17	Operational data: Datasets extracted from production systems.
+4.18	PII: Personally Identifiable Information
+4.19	Purchased Service Worker: Purchased service workers are provided pursuant to a purchased service arrangement with outside contractor. Business is outsourcing an entire service or project as opposed to supplementing existing workforce. Typically, they are billed on a per project fixed cost. 
+4.20	Risk: A measure of the extent to which an entity is threatened by a potential circumstance or event, and typically a function of (1) the adverse impacts that would arise if the circumstance or event occurs; and (2) the likelihood of occurrence. 
+4.21	Sensitive Information: Refers to any data or information that, if disclosed, altered, or accessed without authorization, could cause harm to individuals, the organization, or its stakeholders. This includes personally identifiable information (PII), financial data, trade secrets, and confidential business information.
+4.22	ServiceNow Platform: The enterprise cloud platform used for IT service management (ITSM), IT operations management (ITOM), and business process automation (BPA) provided by ServiceNow Inc.
+4.23	Significant change or enhancement (to the ServiceNow platform): A significant change or enhancement to the ServiceNow platform is characterized by one or more of the following factors:
+4.23.1	Impact on Functionality: The change introduces new features, modules, or capabilities to the ServiceNow platform that enhance its functionality or provide additional value to users.
+4.23.2	Scope of Implementation: The change affects a wide range of users, departments, or business processes within the organization, requiring coordination and collaboration across multiple teams.
+4.23.3	Integration Complexity: The change involves integrating the ServiceNow platform with other systems, applications, or databases, requiring careful planning and coordination to ensure seamless interoperability.
+4.23.4	Data Migration: The change involves the migration of a significant amount of data from existing systems or databases to the ServiceNow platform, requiring data mapping, transformation, and validation processes.
+4.23.5	System Performance: The change has the potential to impact the performance or scalability of the ServiceNow platform, requiring thorough testing and optimization to ensure optimal system performance.
+4.23.6	Security Implications: The change introduces new security requirements or has implications for the overall security posture of the ServiceNow platform, necessitating additional security measures and controls.
+4.23.7	Organizational Impact: The change has a significant impact on the organization's workflows, business processes, or operational procedures, requiring training, communication, and change management efforts to ensure smooth adoption.
+4.23.8	Regulatory Compliance: The change introduces new regulatory requirements or necessitates compliance with existing regulations, such as data privacy or industry-specific standards, requiring adherence to specific guidelines and controls.
+4.24	Software Development Team: organization employees who are in IT software development organizations.
+4.25	Software Manager: Senior IT management that has oversight of IT software development organizations (IT leadership that directly manage consultants, developers, program managers and application owners, and other roles that are in the training matrix). 
+4.26	Software Security (or Vulnerability) Assessment: A series of test methodologies used to identify security vulnerabilities in applications and/or information systems. There are several security assessment techniques used such as application security threat assessment, architecture review, automated static or dynamic scanning, manual source code analysis and penetration testing. Various combinations of assessment techniques are typically applied based on the application’s risk profile. These assessments are typically performed at the end of the development cycle when application development activities have been completed. Unless otherwise noted, reference to a software security assessment in this document refers to testing by the IT Risk Security Assessment Team.
+4.27	Vulnerability: Weakness in an information system, system security procedures, internal controls, or implementation that could be exploited or triggered by a threat source. 
+
+5	Appropriate Use of Administrator Access
+5.1	Administrative access on the ServiceNow platform should only be used for authorized tasks that require elevated privileges, such as system configuration, maintenance, troubleshooting, and security-related activities specific to ServiceNow.
+5.2	Administrators must adhere to the principle of least privilege, using their elevated access only when necessary and reverting to standard user accounts for routine tasks.
+5.3	Administrators should maintain the confidentiality and integrity of sensitive information accessed during their administrative tasks.
+5.4	Regular backups and system snapshots should be performed before making any significant changes to the system.
+5.5	Administrators should keep their access credentials secure, using strong passwords, multi-factor authentication, and not sharing their credentials with others.
+5.6	Any changes made using administrative access should be properly documented, including the purpose, date, and details of the change.
+
+6	Inappropriate Use of Administrator Access
+6.1	Unauthorized access:
+6.1.1	Using administrative privileges on the ServiceNow platform to access areas, modules, or data for which the individual does not have explicit authorization.
+6.2	Data manipulation:
+6.2.1	Modifying, deleting, or tampering with data without proper authorization or legitimate business need.
+6.3	Unauthorized configuration changes:
+6.3.1	Making unauthorized changes to ServiceNow platform configurations, workflows, business rules, or security controls without proper authorization.
+6.4	Unauthorized application deployment:
+6.4.1	Installing or modifying ServiceNow applications or plugins without proper authorization or adherence to change management processes.
+6.5	Privilege escalation:
+6.5.1	Attempting to gain additional privileges or access beyond what is necessary for the completion of authorized tasks.
+6.6	Sharing or disclosing administrative credentials:
+6.6.1	Sharing, disclosing, or allowing others to use administrative credentials without proper authorization.
+6.7	Negligent or malicious actions:
+6.7.1	Engaging in actions that could compromise the security, availability, or integrity of systems, applications, or data.
+
+7	Roles & Responsibilities
+7.1	Roles and responsibilities related to appropriate administrative access on the ServiceNow platform are listed below. 
+7.2	System Administrators are responsible for:
+7.2.1	Managing and maintaining the ServiceNow platform.
+7.2.2	Granting and revoking administrative access to authorized individuals based on their roles and responsibilities.
+7.2.3	Ensuring that administrative access is provided only to individuals who require it for their job functions.
+7.2.4	Monitoring and reviewing administrative activities to ensure compliance with the policy.
+7.2.5	Regularly reviewing and updating administrative access privileges based on changing organizational needs.
+7.3	Administrative Users are responsible for:
+7.3.1	Understanding and complying with the Administrative Rights Access Policy.
+7.3.2	Using administrative access on the ServiceNow platform only for authorized tasks and adhering to the principle of least privilege.
+7.3.3	Safeguarding their access credentials and not sharing them with others.
+7.3.4	Documenting and maintaining records of changes made using administrative access.
+7.3.5	Reporting any suspected or actual policy violations to the appropriate authority.
+7.4	Information Security Team are responsible for: 
+7.4.1	Collaborating with system administrators to enforce the policy and ensure compliance.  
+7.4.2	Conducting regular audits and assessments to identify any policy violations or security risks related to administrative access.
+7.4.3	Providing guidance and training to administrators on best practices for secure administrative access.
+7.4.4	Investigating reported policy violations and take appropriate actions based on the severity of the violation.  
+7.4.5	Participating in the review and update of the policy to address emerging security threats and industry best practices.
+7.5	Management and Human Resources are responsible for: 
+7.5.1	Supporting the implementation and enforcement of the Administrative Rights Access Policy.
+7.5.2	Communicating the importance of responsible administrative access to employees and contractors.
+7.5.3	Ensuring that employees and contractors receive appropriate training on the policy and their responsibilities.
+7.5.4	Collaborating with the information security team to address any policy violations and apply disciplinary actions if necessary.
+7.5.5	Reviewing and approving any changes or updates to the policy based on organizational needs and legal requirements.
+7.6	Employees and Contractors are responsible for:
+7.6.1	Understanding and complying with the policy and their responsibilities regarding administrative access.
+7.6.2	Using administrative access only when necessary for authorized tasks.
+7.6.3	Reporting any potential security vulnerabilities or policy violations to the appropriate authority.
+7.6.4	Participating in training programs to enhance their understanding of administrative access best practices and security measures.
+7.6.5	Adhering to the organization code of conduct and ethical guidelines when using administrative access.
+7.7	By clearly defining the roles and responsibilities associated with the Administrative Rights Access Policy, the organization can establish accountability and ensure that all stakeholders understand their obligations in maintaining the security and integrity of the ServiceNow platform.
+
+8	Consequences of Violations
+Violations of this policy may result in disciplinary action, up to and including termination of employment or contract, and may also lead to legal consequences if applicable laws are violated. The severity of the consequences will depend on the nature and impact of the violation.
+
+9	Policy Review
+This policy will be reviewed periodically to ensure its effectiveness and compliance with changing organizational needs, ServiceNow best practices, and legal requirements. Any necessary updates or modifications will be made in a timely manner.
+
+10	Policy Acceptance
+By accepting administrative rights or privileged access on the ServiceNow platform, individuals acknowledge their understanding of and commitment to comply with this policy. Failure to comply may result in the revocation of administrative privileges and disciplinary action.
+
+11	Revision History and Location
+Number	Date	Revised by	Changes
+1.0	08/08/2023	GPT             Initial policy framework created
+1.1	08/09/2023	Patrick Quinn	Updated with NM/SNOW platform specifics
